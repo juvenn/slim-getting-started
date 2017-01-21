@@ -40,6 +40,10 @@ Cloud::define("sieveOfPrimes", function($params, $user) {
     return $numbers;
 });
 
+Cloud::beforeSave("TestPost", function($obj, $user) {
+    return $obj;
+});
+
 /*
 
 Cloud::onLogin(function($user) {
@@ -55,10 +59,6 @@ Cloud::onInsight(function($params) {
 
 Cloud::onVerified("sms", function($user){
     return;
-});
-
-Cloud::beforeSave("TestObject", function($obj, $user) {
-    return $obj;
 });
 
 Cloud::beforeUpdate("TestObject", function($obj, $user) {
